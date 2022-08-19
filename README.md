@@ -1,7 +1,7 @@
 # Data-Sanitizer--custom-server
 This is an updated version of Data Sanitizer repo which basically utilizes python's built-in server to serve the data in a chart representation through chart.js.
 
-Purpose of program?
+# Purpose of the program?
 Suppose you want to send mass emails, but the data you have also contains some emails that repeat 2 or more times. The file contains 5000 emails. So will 
 you manually remove the repeated ones? Doing it manually will take weeks to months. Hence this program solves the issue by taking the data and outputing it in a 
 unique form with stats. 
