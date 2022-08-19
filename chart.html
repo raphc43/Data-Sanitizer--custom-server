@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+	<h2 style='font-family: Verdana'>Wait for stats...</h2>
+	<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var myJson = {}
+var text_array = []
+var data_array = []
+
+fetch('http://localhost:8000/stats.json', {method : "GET", mode: 'cors'}).then(
+	(response) => {return response.json();}).then(
+		(data) => {text_array = data.text;
+					data_array = data.data});
+
+setTimeout(() => {
+	var ctx = document.getElementById('myChart');
+
+	var chart = new Chart(ctx, 
+  	{
+    	type : 'pie',
+
+    	data : {
+      		labels : text_array,
+      		datasets : [{
+        		label : 'Data',
+        		data : data_array,
+        		backgroundColor: 'rgba(255, 99, 71, 1)'
+      		}] 
+    		}
+  		});
+}, 3000);
+
+</script>
+
+</body>
+</html>
+
+
