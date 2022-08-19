@@ -1,5 +1,4 @@
 import json
-import webbrowser
 
 # dictionary with parallel logic
 stats_list = {'text': ['Total items', 'Trimmed items', 'Remaining'], 'data': [0, 0, 0]}
@@ -28,6 +27,5 @@ def show_stats(new_data, unique_data_list):
 	file.write(json.dumps(stats_list))
 	file.close()
 
-	url = "http://localhost:8000/chart.html"
+	return True
 	
-	return webbrowser.open(url, new=2)

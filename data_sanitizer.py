@@ -1,6 +1,7 @@
 from stats import show_stats
+import webbrowser
 
-def trim_data(arg):
+def trim_data(arg, return_browser=True):
 	'''Function that takes an input,
 	sanitize or trims the repeated data 
 	and return it as a unique one'''
@@ -44,6 +45,10 @@ def trim_data(arg):
 	# Returns stats in json object 
 	show_stats(new_data, unique_data_list)
 
-
+	url = "http://localhost:8000/chart.html"
+	
+	if return_browser:
+		return webbrowser.open(url, new=2)
+	return
 
 trim_data('example.txt')
