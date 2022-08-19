@@ -28,6 +28,6 @@ def show_stats(new_data, unique_data_list):
 	file.write(json.dumps(stats_list))
 	file.close()
 
-	url = "file:///C:/Users/786%20computers/Desktop/python_work/data_sanitizer/chart.html"
+	url = "http://localhost:8000/chart.html"
 	
 	return webbrowser.open(url, new=2)
