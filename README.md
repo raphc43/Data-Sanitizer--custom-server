@@ -9,7 +9,7 @@ unique form with stats.
 # How to use the program?
 The repo consist of 5 total files, in which the main file is data_sanitizer.py
 
-1 - Open CMD and issue 'python -m http.server' command to launch the server.
+1 - Open CMD, navigate to the repo and issue 'python custom_server.py' command to launch the server.
 
 2 - Then execute data_sanitizer.py file either by running it through a text editor or by directly clicking it.
 
@@ -17,4 +17,5 @@ The repo consist of 5 total files, in which the main file is data_sanitizer.py
 
 # Why use a server?
 The chart.html uses fetch API to get the data from stats.json, and fetch does not directly work with local directories, hence it requires a server to fetch files. 
-And since the host is only one, fetching encounters no CORS issues.
+Sinceince the host is only one, fetching encounters no CORS issues, but I modified the server in order to expand the scope of the project. For example after implementing
+React, fetch API will be able to bypass CORS
