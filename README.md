@@ -7,7 +7,7 @@ you manually remove the repeated ones? Doing it manually will take weeks to mont
 unique form with stats. 
 
 # How to use the program?
-The repo consist of 6 total files, in which the main file is data_sanitizer.py
+The repo consist of 6 total files (excluding README), in which the main file is data_sanitizer.py
 
 1 - Open CMD, navigate to the repo and issue 'python custom_server.py' command to launch the server.
 
@@ -17,4 +17,4 @@ The repo consist of 6 total files, in which the main file is data_sanitizer.py
 
 # Why use a server?
 The chart.html uses fetch API to get the data from stats.json, and fetch does not directly work with local directories, hence it requires a server to fetch files. 
-Since the host is only one, fetching encounters no CORS issues, but I modified the server in order to expand the scope of the project. For example even after implementing React, fetch will have no problem in bypassing CORS
+Since the host is only one, fetching encounters no CORS issues, but I modified the server in order to expand the scope of the project. For example even after implementing React, fetch will have no problem in bypassing CORS.
