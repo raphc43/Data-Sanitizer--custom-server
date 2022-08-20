@@ -18,37 +18,3 @@ The repo consist of 6 total files (excluding README), in which the main file is 
 # Why use a server?
 The chart.html uses fetch API to get the data from stats.json, and fetch does not directly work with local directories, hence it requires a server to fetch files. 
 Since the host is only one, fetching encounters no CORS issues, but I modified the server in order to expand the scope of the project. For example even after implementing React, fetch will have no problem in bypassing CORS.
-
-To prune dictionaries:
-
-```py
->>> import jsonmask
->>> mask = jsonmask.parse_fields('a,b(c,d)')
->>> jsonmask.apply_json_mask(
-    {
-        'a': {
-            'nested_within_a': True,
-        },
-        'b': {
-            'c': True,
-            'd': {'Will get included?': 'Yes'},
-            'e': 'Tough luck here',
-        },
-        'c': 'Definitely hopeless',
-    },
-    mask,
-)
-```
-Output:
-```py
-
-{
-    'a': {
-        'nested_within_a': True,
-    },
-    'b': {
-        'c': True,
-        'd': {'Will get included?': 'Yes'},
-    },
-}
-```
